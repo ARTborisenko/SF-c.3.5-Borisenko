@@ -1,14 +1,15 @@
 from config import KEY, keys, TOKEN
 import requests
 import json
-import telebot
+
 
 class CovertionException(Exception):
     pass
 
+
 class GetPrice():
     @staticmethod
-    def get_price(quote:str, base:str, amount:str):
+    def get_price(quote: str, base: str, amount: str):
         if quote == base:
             raise CovertionException(f'Не удалось перевести одинаковые валюты {base}.')
 
